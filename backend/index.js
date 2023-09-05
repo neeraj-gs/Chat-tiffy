@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 
 app.post("/authenticate",async(req,res)=>{
-    const {username} = req.body;
+    const username = req.body.username;
     return res.json({
         username:username,
         secret:"sha256..."
